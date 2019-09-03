@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android" id="cordova-plugin-install-info" version="0.0.1">
+
+	<name>Install Info</name>
+	<description>Install Referrer Name</description>
+	<author>Nirbhay Gupta</author>
+	<license>MIT</license>
+	<keywords>install,referrer</keywords>
+
+	<engines>
+		<engine name="cordova" version=">=6.0.0" />
+	</engines>
+
+	<dependency id="cordova-support-google-services" />
+
+	<js-module src="www/InstallInfo.js" name="InstallInfo">
+		<clobbers target="window.InstallInfo" />
+	</js-module>
+
+	<!-- android -->
+	<platform name="android">
+
+		<!-- <preference name="PLAY_SERVICES_VERSION" default="11.8.0"/> -->
+
+		<framework src="com.android.installreferrer:installreferrer:1.0"/>
+
+		<config-file target="res/xml/config.xml" parent="/*">
+			<feature name="InstallInfo">
+			    <param name="android-package" value="com.progcap.install.InstallInfo"/>
+			</feature>
+		</config-file>
+
+		<!-- <config-file target="AndroidManifest.xml" parent="/*">
+			<uses-feature android:name="android.hardware.telephony" android:required="false" />
+		</config-file> -->
+
+		<source-file src="src/android/InstallInfo.java" target-dir="src/com/progcap/install" />
+	</platform>
+
+</plugin>

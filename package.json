@@ -1,0 +1,26 @@
+{
+    "name": "cordova-plugin-install-info",
+    "version": "0.0.1",
+    "description": "Cordova plugin to get install referrer",
+    "cordova": {
+        "id": "cordova-plugin-install-info",
+        "platforms": [
+            "android"
+        ]
+    },
+    "engines": [
+        {
+            "name": "cordova",
+            "version": ">=6.0.0"
+        },
+        {
+            "name": "cordova-android",
+            "version": ">=4"
+        }
+    ],
+    "author": {
+        "name": "Nirbhay Gupta",
+        "email": "guptanirbhay93@gmail.com"
+    },
+    "license": "MIT"
+}
