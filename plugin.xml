@@ -14,7 +14,7 @@
 
 	<dependency id="cordova-support-google-services" />
 
-	<asset src="www/RazorpayCheckout.js" target="js/RazorpayCheckout.js"/>
+	<asset src="www/InstallInfo.js" target="js/InstallInfo.js"/>
 
 	<js-module src="www/InstallInfo.js" name="InstallInfo">
 		<clobbers target="InstallInfo" />
