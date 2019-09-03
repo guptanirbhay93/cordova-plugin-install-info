@@ -1,9 +1,9 @@
 {
-    "name": "cordova-plugin-install-info",
+    "name": "com.progcap.install",
     "version": "1.0.0",
     "description": "Cordova plugin to get install referrer",
     "cordova": {
-        "id": "cordova-plugin-install-info",
+        "id": "com.progcap.install",
         "platforms": [
             "android"
         ]

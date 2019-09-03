@@ -1,4 +1,4 @@
-cordova.define("cordova-plugin-install-info.InstallInfo", function(
+cordova.define("com.progcap.install.InstallInfo", function(
     require,
     exports,
     module
