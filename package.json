@@ -1,12 +1,16 @@
 {
     "name": "cordova-plugin-install-info",
-    "version": "0.0.1",
+    "version": "1.0.0",
     "description": "Cordova plugin to get install referrer",
     "cordova": {
         "id": "cordova-plugin-install-info",
         "platforms": [
             "android"
         ]
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/guptanirbhay93/referrer-plugin.git"
     },
     "engines": [
         {

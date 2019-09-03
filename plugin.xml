@@ -29,6 +29,7 @@
 			<feature name="InstallInfo">
 			    <param name="android-package" value="com.progcap.install.InstallInfo"/>
 			</feature>
+			<param name="onload" value="true" />
 		</config-file>
 
 		<!-- <config-file target="AndroidManifest.xml" parent="/*">
