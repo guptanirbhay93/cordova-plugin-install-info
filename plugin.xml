@@ -2,7 +2,7 @@
 
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android" id="com.progcap.install" version="1.0.0">
 
-	<name>Install Info</name>
+	<name>InstallInfo</name>
 	<description>Install Referrer Name</description>
 	<author>Nirbhay Gupta</author>
 	<license>MIT</license>
@@ -14,8 +14,10 @@
 
 	<dependency id="cordova-support-google-services" />
 
+	<asset src="www/RazorpayCheckout.js" target="js/RazorpayCheckout.js"/>
+
 	<js-module src="www/InstallInfo.js" name="InstallInfo">
-		<clobbers target="window.InstallInfo" />
+		<clobbers target="InstallInfo" />
 	</js-module>
 
 	<!-- android -->
