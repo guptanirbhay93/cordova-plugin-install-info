@@ -104,7 +104,7 @@ public class InstallInfo extends CordovaPlugin {
             resultJson.put("beginTime", beginTime);
             PluginResult result = new PluginResult(PluginResult.Status.OK, resultJson);
             callbackContext.sendPluginResult(result);
-        } catch(RemoteException e) {
+        } catch(RemoteException | JSONException e) {
             Log.e(TAG, "Remote Message: " + e.getMessage());
             PluginResult result = new PluginResult(PluginResult.Status.ERROR, "Some Error");
 
