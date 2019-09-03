@@ -95,9 +95,9 @@ public class InstallInfo extends CordovaPlugin {
         try {
             ReferrerDetails response = referrerClient.getInstallReferrer();
             String refferName = response.getInstallReferrer();
-//            Long clickTime = response.getReferrerClickTimestampSeconds();
-//            Long beginTime = response.getInstallBeginTimestampSeconds();
-            PluginResult result = new PluginResult(PluginResult.Status.OK, refferName);
+            Long clickTime = response.getReferrerClickTimestampSeconds();
+            Long beginTime = response.getInstallBeginTimestampSeconds();
+            PluginResult result = new PluginResult(PluginResult.Status.OK, refferName, clickTime, beginTime);
             callbackContext.sendPluginResult(result);
         } catch(RemoteException e) {
             Log.e(TAG, "Remote Message: " + e.getMessage());
