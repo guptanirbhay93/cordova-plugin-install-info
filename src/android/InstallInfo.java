@@ -18,6 +18,7 @@ import org.apache.cordova.CordovaWebView;
 import org.apache.cordova.PluginResult;
 import org.json.JSONArray;
 import org.json.JSONException;
+import org.json.JSONObject;
 
 import com.android.installreferrer.api.InstallReferrerClient;
 import com.android.installreferrer.api.InstallReferrerStateListener;
@@ -97,7 +98,11 @@ public class InstallInfo extends CordovaPlugin {
             String refferName = response.getInstallReferrer();
             Long clickTime = response.getReferrerClickTimestampSeconds();
             Long beginTime = response.getInstallBeginTimestampSeconds();
-            PluginResult result = new PluginResult(PluginResult.Status.OK, refferName, clickTime, beginTime);
+            JSONObject resultJson = new JSONObject();
+            resultJson.put("reffer", refferName);
+            resultJson.put("clickTime", clickTime);
+            resultJson.put("beginTime", beginTime);
+            PluginResult result = new PluginResult(PluginResult.Status.OK, resultJson);
             callbackContext.sendPluginResult(result);
         } catch(RemoteException e) {
             Log.e(TAG, "Remote Message: " + e.getMessage());
