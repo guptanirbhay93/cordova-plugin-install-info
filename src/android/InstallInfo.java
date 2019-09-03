@@ -27,7 +27,7 @@ public class InstallInfo extends CordovaPlugin {
     private CallbackContext callbackContext;
     private InstallReferrerClient referrerClient;
     private static final String TAG = "cordova-plugin-install-info";
-    private static final String ACTION_BUILD_CONNECTION = "buildConnection";
+    private static final String ACTION_BUILD_CONNECTION = "startConnection";
     private static final String ACTION_GET_INSTALL_REFERER = "getInstallReferrer";
 
     @Override
