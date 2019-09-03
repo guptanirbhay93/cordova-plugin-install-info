@@ -30,15 +30,15 @@ public class InstallInfo extends CordovaPlugin {
     private static final String ACTION_BUILD_CONNECTION = "buildConnection";
     private static final String ACTION_GET_INSTALL_REFERER = "getInstallReferrer";
 
-//     @Override
-//     public void initialize(CordovaInterface cordova, CordovaWebView webView) {
-//         Log.d(TAG, "initialize");
-//         super.initialize(cordova, webView);
+    @Override
+    public void initialize(CordovaInterface cordova, CordovaWebView webView) {
+        Log.d(TAG, "initialize");
+        super.initialize(cordova, webView);
 
-//         // Get an instance of SmsRetrieverClient, used to start listening for a matching SMS message.
-// //        smsRetrieverClient = SmsRetriever.getClient(cordova.getActivity().getApplicationContext());
-
-//     }
+        // Get an instance of SmsRetrieverClient, used to start listening for a matching SMS message.
+//        smsRetrieverClient = SmsRetriever.getClient(cordova.getActivity().getApplicationContext());
+        referrerClient = InstallReferrerClient.newBuilder(cordova.getActivity().getApplicationContext()).build();
+    }
 
     public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
         PluginResult result = null;
@@ -59,7 +59,7 @@ public class InstallInfo extends CordovaPlugin {
     }
 
     private void startConnection(CallbackContext callbackContext) {
-        referrerClient = InstallReferrerClient.newBuilder(cordova.getActivity().getApplicationContext()).build();
+
         referrerClient.startConnection(new InstallReferrerStateListener() {
             @Override
             public void onInstallReferrerSetupFinished(int responseCode) {
